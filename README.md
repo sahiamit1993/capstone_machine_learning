@@ -3,12 +3,16 @@ The primary task is to segment customers based on their purchasing behavior, wit
 Here is a table summarizing the evaluation metric scores for each model:
 
 Model	Silhouette Score	Calinski-Harabasz Score	Davies-Bouldin Score
+
+
 KMeans	0.28	2852.854938	1.087333
 DBSCAN	0.32	133.695582	2.327175
 Agglomerative Clustering	0.55	236.2774858456139	0.9345869118609656
 The Agglomerative Clustering model with hyperparameter optimization clearly outperforms the other models in terms of all three evaluation metrics. This suggests that this model is the best choice for this particular dataset and can provide the most accurate and reliable predictions.
 
 Conclusion
+
+
 Three different clustering models were implemented and evaluated: KMeans, DBSCAN, and Agglomerative Clustering.
 The Agglomerative Clustering model with hyperparameter optimization achieved the best performance, with a silhouette score of 0.55.
 The Shap values were used to explain the feature importance of the Agglomerative Clustering model.
