@@ -6,8 +6,11 @@ Model	Silhouette Score	Calinski-Harabasz Score	Davies-Bouldin Score
 
 
 KMeans	0.28	2852.854938	1.087333
+
 DBSCAN	0.32	133.695582	2.327175
+
 Agglomerative Clustering	0.55	236.2774858456139	0.9345869118609656
+
 The Agglomerative Clustering model with hyperparameter optimization clearly outperforms the other models in terms of all three evaluation metrics. This suggests that this model is the best choice for this particular dataset and can provide the most accurate and reliable predictions.
 
 Conclusion
