@@ -1,48 +1,17 @@
-**Title:** Sample Capstone Machine Learning Submission Template (Python)
+The primary task is to segment customers based on their purchasing behavior, with a particular focus on identifying distinct groups that can be targeted with tailored marketing strategies. Given that many customers of the company are wholesalers, it is crucial to analyze both individual and bulk purchasing patterns to effectively capture the diverse range of customer behaviors present in the dataset.
 
-**Description:**
+Here is a table summarizing the evaluation metric scores for each model:
 
-This repository provides a sample Jupyter Notebook template specifically designed for capstone machine learning projects using Python.  The template guides you through the essential steps of the machine learning workflow, helping you structure your capstone project effectively.
+Model	Silhouette Score	Calinski-Harabasz Score	Davies-Bouldin Score
+KMeans	0.28	2852.854938	1.087333
+DBSCAN	0.32	133.695582	2.327175
+Agglomerative Clustering	0.55	236.2774858456139	0.9345869118609656
+The Agglomerative Clustering model with hyperparameter optimization clearly outperforms the other models in terms of all three evaluation metrics. This suggests that this model is the best choice for this particular dataset and can provide the most accurate and reliable predictions.
 
-**Benefits:**
-
-* **Structured Approach:** Ensures a clear and organized project structure, facilitating communication and evaluation.
-* **Capstone-Specific:** Focuses on key stages relevant to capstone projects, including problem definition, data exploration, model selection, and result interpretation.
-* **Commented Cells:** Provides explanations and guidance throughout the notebook, making it easier to follow and adapt.
-
-**Getting Started:**
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/sahiamit1993/capstone_machine_learning.git
-   ```
-
-2. **Install dependencies:**
-
-   The specific dependencies will depend on the libraries used in the notebook. You can usually find them listed in the notebook itself or in a `requirements.txt` file. Install them using pip:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Open the notebook:**
-
-   Use a Jupyter Notebook environment to open `Copy_of_Sample_ML_Submission_Template.ipynb`.
-
-**Customize the Template:**
-
-* **Define Your Capstone Problem:** Replace the placeholder problem statement with your specific capstone project's objective.
-* **Load and Explore Your Data:** Adapt the data loading and exploration sections to work with your own dataset.
-* **Choose and Implement a Model:** Select a suitable machine learning model based on your problem and data characteristics. 
-* **Evaluate and Interpret Results:** Modify the evaluation metrics and incorporate your insights into the results interpretation.
-
-**Note:**
-
-* This template serves as a foundation for your capstone project. Feel free to modify and extend the notebook as needed.
-* Consider including additional sections specific to your capstone project requirements, such as data cleaning, feature engineering, or hyperparameter tuning.
-
-**Additional Information:**
-
-* Welcome contributions to the template through pull requests to improve it for future users.
-* If you have any questions, feel free to raise an issue on the repository.
+Conclusion
+Three different clustering models were implemented and evaluated: KMeans, DBSCAN, and Agglomerative Clustering.
+The Agglomerative Clustering model with hyperparameter optimization achieved the best performance, with a silhouette score of 0.55.
+The Shap values were used to explain the feature importance of the Agglomerative Clustering model.
+The best performing model was saved to a pickle file and a joblib file for deployment.
+The saved model was loaded and used to predict unseen data, confirming its functionality.
+Overall, this project successfully created and evaluated a clustering model that can be used to segment customers based on their RFM behavior. This model can be used to improve marketing campaigns, product recommendations, and customer engagement.
